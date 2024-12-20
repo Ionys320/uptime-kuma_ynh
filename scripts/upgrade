@@ -44,6 +44,7 @@ pushd "$install_dir"
 	ynh_hide_warnings ynh_exec_as_app npm run download-dist
 	# Residue of old versions caching
 	ynh_safe_rm $install_dir/.cache
+	ynh_hide_warnings ynh_exec_as_app npm run build
 popd
 
 #=================================================
